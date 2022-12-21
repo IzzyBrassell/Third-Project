@@ -7,6 +7,7 @@ let cb2 = document.getElementById('cb2')
 let includeUppercase = cb2.checked;
 let cb4 = document.getElementById('cb4')
 let includeSpecial = cb4.checked;
+let passwordLength = document.getElementById('numberSelect')
 document.getElementById('numberSelect').addEventListener('change', function() {
   passwordLength = this.value;
 });
