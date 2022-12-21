@@ -25,9 +25,17 @@
           ></textarea>
         </div>
         <label for="passwordLength">Password Length (8-128 characters)</label>
-        <form id="passwordLength">
-          <input type="number" min="8" max="128" id="pwLength" value="12">
-          </form>
+        <select id="numberSelect"></select>
+
+        <script>
+          let select = document.querySelector('#numberSelect');
+            for (let i = 8; i <= 128; i++) {
+            let option = document.createElement('option');
+            option.value = i;
+            option.text = i;
+            select.add(option);
+         }
+        </script>
         <div>
           <input type="checkbox" id="cb1" value="num"/>
           <label for="cb1">Numbers</label>
@@ -41,7 +49,7 @@
           <label for="cb1">Special characters</label>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <button id="generate" class="btn" onclick="writePassword();">Generate Password</button>
         </div>
       </div>
     </div>
